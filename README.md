@@ -2,7 +2,7 @@
 
     A Flutter project build with the goal be available for use even when the internet is not available.
 
-    ![ScreenShot](./ScreenShots/home.png)
+    <img src = "Screenshots/home.png" height = "200">
 
     Storage Used :
     -> File Storage
