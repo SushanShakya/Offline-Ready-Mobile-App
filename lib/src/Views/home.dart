@@ -72,7 +72,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
           body: Consumer<DataStorageController>(
             builder: (context, controller, child) {
               return RefreshIndicator(
-                onRefresh: () async{
+                onRefresh: () async {
                   controller.refresh();
                   animationController.reset();
                   return Future.delayed(Duration.zero);
@@ -111,8 +111,17 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                                 );
                               },
                             )
-                          : Center(
-                              child: Text('${controller.message}'),
+                          : AlertDialog(
+                              title: Text("Error"),
+                              content: Text("${controller.message}"),
+                              actions: <Widget>[
+                                MaterialButton(
+                                  child: Text('Retry'),
+                                  onPressed: () {
+                                    controller.refresh();
+                                  },
+                                )
+                              ],
                             );
                     } else {
                       return Center(
