@@ -2,7 +2,7 @@
 
     A Flutter project build with the goal to make data available for use even when the internet is not available.
 
-<img src = "ScreenShots/home.png" >
+<img src = "ScreenShots/home.png" height = "300">
 
     Storage Used :
         -> File Storage
